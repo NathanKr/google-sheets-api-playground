@@ -3,7 +3,7 @@ Play with google sheets api using node and service account
 
 <h2>Setup</h2>
 <ol>
-<li>Create a google workspace project e.g. google sheets project name "Google Sheets API Sample"</li>
+<li>Create a <a href='https://developers.google.com/workspace/guides/create-project'>google cloud project</a> to use Google Workspace APIs  e.g. google sheets project name "Google Sheets API Sample"</li>
 <li>Enable API for "Google Sheets API Sample" project</li>
 <li>Create credential - service account</li>
 <li>Export the service credential file - here it is on secret directory but git ignored</li>

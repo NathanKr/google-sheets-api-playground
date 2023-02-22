@@ -4,6 +4,13 @@ import { GoogleSpreadsheet } from "google-spreadsheet";
 
 interface IData {
   docTitle: string;
+  firstSheet: {
+    title: string;
+    index: number;
+    rowCount: number;
+    names: string[];
+    emails: string[];
+  };
 }
 
 export default async function handler(
@@ -26,5 +33,21 @@ export default async function handler(
 
   await doc.loadInfo(); // loads document properties and worksheets
 
-  res.status(200).json({ docTitle: doc.title });
+  const firstSheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
+
+  // read rows
+  const firstSheetRows = await firstSheet.getRows();
+
+  // read/write row values
+
+  res.status(200).json({
+    docTitle: doc.title,
+    firstSheet: {
+      title: firstSheet.title,
+      index: firstSheet.index,
+      rowCount: firstSheet.rowCount,
+      names: [firstSheetRows[0].name, firstSheetRows[1].name],
+      emails: [firstSheetRows[0].email, firstSheetRows[1].email],
+    },
+  });
 }
