@@ -11,6 +11,9 @@ Play with google sheets api using node and service account
 <li>Use the credential file (must be on .gitignore)  inside your application which access google workspace API e.g. google sheet API</li>
 </ol>
 
+<h2>Sheet</h2>
+
+![text](./figs/sheet.png)
 
 <h2>Why am i using here next.js</h2>
 This is actually just server stuff so why use next.js ?
