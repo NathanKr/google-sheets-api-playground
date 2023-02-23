@@ -15,10 +15,18 @@ Play with google sheets api using node and service account
 
 ![text](./figs/sheet.png)
 
+
 <h2>Why am i using here next.js</h2>
-This is actually just server stuff so why use next.js ?
+This might well be just server stuff so why use next.js ?
 <ul>
 <li>typescript out of the box</li>
 <li>support env variable out of the box</li>
 <li>deployment out of the box by button click</li>
+<li>it is easy to use UI to access different operations : read / add / delete / update</li>
+</ul>
+
+
+<h2>Open issues</h2>
+<ul>
+<li>each column on 'google-sheets-api-playground' tab has title : name and email. This is used in the code to access specific column. Is it a must ?</li>
 </ul>
