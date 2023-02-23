@@ -1,5 +1,5 @@
 <h2>Motivation</h2>
-Play with google sheets api using node and service account
+Play with google sheets api implemening CRUD using node and service account
 
 <h2>Setup</h2>
 <ol>
@@ -10,6 +10,16 @@ Play with google sheets api using node and service account
 <li>Share the resource - google sheet file with client_email (check secret)</li>
 <li>Use the credential file (must be on .gitignore)  inside your application which access google workspace API e.g. google sheet API</li>
 </ol>
+
+<h2>API</h2>
+The API i am using to access google sheet is google-spreadsheet which is very super simple wrapper aroung google API. check its usage
+<ul>
+<li>read : /api/google-sheets-read<li>
+<li>create : /api/google-sheets-add<li>
+<li>update : /api/google-sheets-edit<li>
+<li>delete : /api/google-sheets-delete<li>
+</ul>
+
 
 <h2>Sheet</h2>
 
